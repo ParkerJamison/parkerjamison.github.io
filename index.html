@@ -9,13 +9,45 @@
                 background: #000000;
                 color: white;
             }
-            </style>
+            .row {
+				display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+            .side {
+                -ms-flex: 30%; /* IE10 */
+                flex: 30%;
+                background-color: #f1f1f1;
+                padding: 20px;
+            }
+
+            /* Main column */
+            .main {   
+                -ms-flex: 70%; /* IE10 */
+                flex: 70%;
+                background-color: white;
+                padding: 20px;
+            }
+                
+        </style>
+        
     </head>
 
     <body>
         <div class="header">
             <h3>PARKER JAMISON</h3>
         </div>
+        
+        <div class="row">
+            <div class="side">
+                <h5> TEST </h5>
+            </div>
+            <div class="main">
+                <h2> HELLO </h2>
+            </div>
+        </div>
+        
     </body>
 
 </html>
