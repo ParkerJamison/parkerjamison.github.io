@@ -1,58 +1,149 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>PageTitle</title>
-        <meta charset="UTF-8">
+<head>
+  <meta charset="utf-8" />
+  <title>Parker Jamison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.5;
+    }
+    .header {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .side {
+      flex: 1 1 250px;
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .main {
+      flex: 3 1 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    h2, h3, h4 {
+      margin-bottom: 12px;
+      color: #222;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    a {
+      color: #0073e6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .project {
+      margin-bottom: 32px;
+    }
+    .project-description {
+      margin-left: 10px;
+    }
+    .contact {
+      text-align: center;
+      margin: 60px 0 40px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>PARKER JAMISON</h1>
+    <p>Computer Science Student | University of Oregon</p>
+  </div>
 
-        <style>
-        * {
-  			box-sizing: border-box;
-		}
-            .header {
-                padding: 80px;
-                background: #000000;
-                color: white;
-            }
-            .row {
-				display: -ms-flexbox;
-                display: flex;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            }
-            .side {
-                -ms-flex: 30%; /* IE10 */
-                flex: 30%;
-                background-color: #f1f1f1;
-                padding: 20px;
-            }
+  <div class="container">
+    <div class="side">
+      <h3>About Me</h3>
+      <p>
+        I'm a computer science student at the University of Oregon specializing in computer vision, machine learning, and performance-efficient software.
+      </p>
+      <h3>Contacts</h3>
+      <p>
+        <a href="https://github.com/ParkerJamison" target="_blank">GitHub</a><br />
+        <a href="https://www.linkedin.com/in/parker-jamison-/" target="_blank">LinkedIn</a><br />
+      </p>
+    </div>
 
-            /* Main column */
-            .main {   
-                -ms-flex: 70%; /* IE10 */
-                flex: 70%;
-                background-color: white;
-                padding: 20px;
-            }
-                
-        </style>
-        
-    </head>
+    <div class="main">
+      <h2>Projects</h2>
 
-    <body>
-        <div class="header">
-            <h3>PARKER JAMISON</h3>
+        <div class="project">
+        <h4><a href="https://github.com/ParkerJamison/MosseFilters" target="_blank">MOSSE Filters (Correlation Filter Tracking)</a></h4>
+        <div class="project-description">
+          <p>
+            A high-performance object tracking system built in C++ (with Python bindings) using MOSSE correlation filters and OpenCV.  
+            Utilizes **dual filters** per tracked object (long-term + short-term) and adaptively updates them based on detection confidence (PSR).  
+            Initialized with a user-defined ROI; continuously tracks across frames and handles occlusions and appearance changes.  
+            Designed for webcam or Raspberry Pi camera setups.  
+            Future enhancements in the repo: dynamic track addition, expanding search when object exits frame, and mode-specific tracking (e.g. human, vehicle).
+          </p>
         </div>
-        
-        <div class="row">
-            <div class="side">
-                <h4> ABOUT ME </h4>
-                <p> I am a Computer Science student at the University of Oregon. </p>
-            </div>
-            <div class="main">
-                <h2> Projects </h2>
-                <a href="https://github.com/ParkerJamison/BirdClassification">Bird Classification</a>
-            </div>
-        </div>
-        
-    </body>
+      </div>
 
+      <div class="project">
+        <h4><a href="https://github.com/ParkerJamison/BirdClassification" target="_blank">Bird Classification</a></h4>
+        <div class="project-description">
+          <p>
+            A convolutional neural network (CNN) built to identify and classify bird species from photographs.  
+            Used transfer learning on pretrained backbones (e.g. ResNet, EfficientNet).  
+            Data augmentation (rotations, color shifts) improved generalization.  
+            Achieved ~90-95% accuracy across 200 species under variable conditions.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <h4><a href="https://github.com/ParkerJamison/VisualOdometry" target="_blank">Visual Odometry</a></h4>
+        <div class="project-description">
+          <p>
+            Implemented a monocular visual odometry system to estimate camera trajectory from image frames.  
+            Uses feature detection (ORB / FAST), essential matrix estimation, pose recovery, and frame-to-frame motion composition.  
+            Incorporated drift correction heuristics and loop detection to reduce error over time.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="contact">
+    <p>© 2025 Parker Jamison — All rights reserved</p>
+  </div>
+</body>
 </html>
