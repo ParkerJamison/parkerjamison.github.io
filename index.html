@@ -125,16 +125,13 @@
       </div>
 
       <div class="project">
-        <h4><a href="https://github.com/ParkerJamison/BirdClassification" target="_blank">Bird Classification</a></h4>
+        <h4><a href="https://github.com/ParkerJamison/BirdStream" target="_blank">Raspberry Pi Bird Species Classification</a></h4>
         <div class="project-description">
           <p>
-            • Developed a convolutional neural network (CNN) using transfer learning with EfficientNet-B2 to
-              identify and classify 200 bird species from photographic images. <br>
-            • Fine-tuned pretrained weights on a custom dataset with data augmentation (random rotations, flips,
-              and color perturbations) to enhance robustness under variable lighting and pose conditions. <br>
-            • Implemented a PyTorch-based training pipeline with stratified splits, early stopping, and learning rate
-              scheduling to optimize generalization performance. <br>
-            • Achieved ~85% accuracy across 200 species under variable conditions. <br>
+            •	Built an end-to-end bird recognition system in PyTorch and OpenCV that classifies 200 bird species from both static images and live camera feeds.<br>
+            •	Fine-tuned a transfer-learning CNN with data augmentation, stratified splits, early stopping, and learning-rate scheduling, achieving ~85% accuracy under variable lighting and pose conditions.<br>
+            •	Deployed the model on a Raspberry Pi, preprocessing frames, sampling live video for inference, and overlaying top predictions in real time.<br>
+            •	Implemented configurable alerting with confidence thresholds, per-species cooldown logic, and SMTP email notifications with attached snapshots for high-confidence detections.<br>
           </p>
         </div>
       </div>
